@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Maldon Salon</title>
+    
+</head>
+<body>
+    <div class="info">
+        <h1>Congratulations! You received 20% off!</h1>
+        <button class="book-now" onclick="window.location.href='https://wa.link/uxr839'">Book Now</button>
+        <p>To know more info about our salon,
+            <button class="ig" onclick="window.location.href='https://www.instagram.com/maldonsalon'">Click here</button>
+        </p>
+        <script>
+            function generateVoucherCode(length) {
+                const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+                let result = '';
+                for (let i = 0; i < length; i++) {
+                    result += characters.charAt(Math.floor(Math.random() * characters.length));
+                }
+                return result;
+            }
+
+            // Display the random voucher code on page load
+            document.getElementById('voucherCode').innerText = generateVoucherCode(5);
+        </script>
+    </div>
+</body>
+</html>
